@@ -1,0 +1,3 @@
+function registUser() {
+    $('#registForm').submit();
+}
