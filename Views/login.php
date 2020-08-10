@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../CSS/login.css">
 </head>
 <body>
-    <div id="header">
+    <div class="header">
         <div>やまったー</div>
     </div>
 
