@@ -47,17 +47,6 @@ body {
     pointer-events: none;
 }
 
-@media screen and (max-width: 480px) {
-    .tabArea {
-        height: 41px;
-        max-height: 10%;
-    }
-    .tab {
-        font-size: 14px;
-        padding: 10px;
-    }
-}
-
 .loginLabel {
     width: calc(40% - 10px);
     margin-left: 10px;
@@ -77,4 +66,27 @@ body {
     height: 480px;
     margin: auto;
     background-color: #fff0f5;
+}
+
+form {
+    display: none;
+}
+
+form.is-active {
+    display: block;
+}
+
+/* スマホ用 */
+@media screen and (max-width: 480px) {
+    .tabArea {
+        height: 41px;
+        max-height: 10%;
+    }
+    .tab {
+        font-size: 14px;
+        padding: 10px;
+    }
+    .tab:hover {
+        opacity: 1.0;
+    }
 }

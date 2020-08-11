@@ -3,9 +3,9 @@
 	require("../Model/dbconnect.php");
 
 	if (!empty($_POST)) {
-        $name = $_POST["username"];
-		$email = $_POST["email"];
-        $password = $_POST["password"];
+        $name = $_POST["registUsername"];
+		$email = $_POST["registEmail"];
+        $password = $_POST["registPassword"];
 
 		if ($email !== '' && $password !== '') {
             $login = $db->prepare('SELECT * FROM members WHERE email = ? AND password = ? AND deleteflg = 0');
@@ -50,25 +50,33 @@
 		<?php endif; ?>
 
         <div class="tabArea">
-            <label class="tab loginLabel is-active">ログイン</label>
-            <label class="tab signupLabel">ユーザー登録</label>
+            <label name="login" class="tab loginLabel is-active">ログイン</label>
+            <label name="signup" class="tab signupLabel">ユーザー登録</label>
         </div>
 
         <div class="contentArea">
-            <form id="registForm" action="" method="post">
+            <input id="mode" type="hidden" value="login">
+            <form id="loginForm" class="is-active" action="" method="post">
+                <div>
+                    <span>メールアドレス</span>
+                    <input id="loginEmail" type="text" name="loginEmail">
+                </div>
+            </form>
+
+            <form id="signupForm" action="" method="post">
                 <div>
                     <span>ユーザー名</span>
-                    <input id="userName" type="text" name="username">
+                    <input id="registUserName" type="text" name="resistUsername">
                 </div>
 
                 <div>
                     <span>メールアドレス</span>
-                    <input id="email" type="text" name="email">
+                    <input id="registEmail" type="text" name="registEmail">
                 </div>
                 
                 <div>
                     <span>パスワード</span>
-                    <input id="password" type="password" name="password">
+                    <input id="registPassword" type="password" name="registPassword">
                 </div>
 
                 <input type="button" value="登録" onclick="registUser()">
