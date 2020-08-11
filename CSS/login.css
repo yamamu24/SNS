@@ -11,6 +11,10 @@ body {
     max-width: 50%;
 }
 
+.error {
+    color: #FF0000;
+}
+
 .content {
     width: 720px;
     max-width: 100%;
@@ -70,10 +74,131 @@ body {
 
 form {
     display: none;
+    text-align: center;
 }
 
 form.is-active {
     display: block;
+}
+
+form input[type=text], input[type="password"] {
+	font: 15px/24px sans-serif;
+	box-sizing: border-box;
+    width: 60%;
+    min-width: 350px;
+	margin: 30px 0 0 0;
+    padding: 6px 10px 4px 48px;
+	transition: 0.3s;
+	border: 1px solid #1b2538;
+	border-radius: 50px;
+	outline: none;
+}
+
+.pictureArea {
+    font: 15px/24px sans-serif;
+	box-sizing: border-box;
+    width: 60%;
+    min-width: 350px;
+	margin: 30px auto 0;
+    padding: 5px 10px 5px 48px;
+	transition: 0.3s;
+	border: 1px solid #1b2538;
+    border-radius: 50px;
+    background-color: #fff;
+    outline: none;
+    text-align: left;
+}
+
+.inputArea input[type=text]:focus, input[type="password"]:focus {
+    border-color: #da3c41;
+}
+
+.userIcon, .emailIcon, .passIcon, .cameraIcon {
+    position: relative;
+}
+
+.userIcon:before {
+    content: "";
+    width: 24px;
+    height: 24px;
+    top: -1px;
+    left: 12px;
+    display: inline-block;
+    position: absolute;
+    background-size: contain;
+    background-image: url("../Images/person.png");
+}
+
+.emailIcon:before {
+    content: "";
+    width: 24px;
+    height: 24px;
+    top: -1px;
+    left: 12px;
+    display: inline-block;
+    position: absolute;
+    background-size: contain;
+    background-image: url("../Images/mail.png");
+}
+
+.passIcon:before {
+    content: "";
+    width: 24px;
+    height: 24px;
+    top: -1px;
+    left: 12px;
+    display: inline-block;
+    position: absolute;
+    background-size: contain;
+    background-image: url("../Images/pass.png");
+}
+
+.cameraIcon:before {
+    content: "";
+    width: 24px;
+    height: 24px;
+    top: -1px;
+    left: -36px;
+    display: inline-block;
+    position: absolute;
+    background-size: contain;
+    background-image: url("../Images/camera.png");
+}
+
+.buttonArea {
+    position: relative;
+    width: 60%;
+    min-width: 350px;
+    margin: 30px auto;
+}
+
+#loginButton {
+    position: absolute;
+    right: 0;
+    width: 40%;
+    height: 36px;
+    min-width: 100px;
+    border-radius: 6px;
+    font-weight: bold;
+    background-color: #ffccff;
+    transition: ease 0.2s;
+}
+
+#loginButton:hover, #signupButton:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+#signupButton {
+    position: absolute;
+    right: 0;
+    width: 40%;
+    height: 36px;
+    min-width: 100px;
+    border-radius: 6px;
+    font-weight: bold;
+    background-color: #ffccff;
+    transition: ease 0.2s;
 }
 
 /* スマホ用 */

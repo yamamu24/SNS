@@ -8,9 +8,18 @@ $(document).ready(function () {
     });
 });
 
+function loginUser() {
+    if ($('#loginEmail').val() && $('#loginPassword').val()) {
+        $('#loginForm').submit();
+    }
+    else {
+        console.log("失敗");
+    }
+}
+
 function registUser() {
-    if ($('#userName').val() && $('#email').val() && $('#password').val()) {
-        $('#registForm').submit();
+    if ($('#registUserName').val() && $('#registEmail').val() && $('#registPassword').val()) {
+        $('#signupForm').submit();
     }
     else {
         console.log("失敗");
