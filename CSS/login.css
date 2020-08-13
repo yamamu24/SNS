@@ -1,17 +1,4 @@
-body {
-    margin: 0;
-    background-color: #f0f8ff;
-}
-
-.header {
-    text-align: center;
-}
-
-.logoimage {
-    max-width: 50%;
-}
-
-.error {
+.errorArea {
     color: #FF0000;
 }
 
@@ -82,27 +69,27 @@ form.is-active {
 }
 
 form input[type=text], input[type="password"] {
-	font: 15px/24px sans-serif;
-	box-sizing: border-box;
+    font: 15px/24px sans-serif;
+    box-sizing: border-box;
     width: 60%;
     min-width: 350px;
-	margin: 30px 0 0 0;
+    margin: 30px 0 0 0;
     padding: 6px 10px 4px 48px;
-	transition: 0.3s;
-	border: 1px solid #1b2538;
-	border-radius: 50px;
-	outline: none;
+    transition: 0.3s;
+    border: 1px solid #1b2538;
+    border-radius: 50px;
+    outline: none;
 }
 
 .pictureArea {
     font: 15px/24px sans-serif;
-	box-sizing: border-box;
+    box-sizing: border-box;
     width: 60%;
     min-width: 350px;
-	margin: 30px auto 0;
+    margin: 30px auto 0;
     padding: 5px 10px 5px 48px;
-	transition: 0.3s;
-	border: 1px solid #1b2538;
+    transition: 0.3s;
+    border: 1px solid #1b2538;
     border-radius: 50px;
     background-color: #fff;
     outline: none;
@@ -212,6 +199,9 @@ form input[type=text], input[type="password"] {
         padding: 10px;
     }
     .tab:hover {
+        opacity: 1.0;
+    }
+    #loginButton:hover, #signupButton:hover {
         opacity: 1.0;
     }
 }

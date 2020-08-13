@@ -5,7 +5,17 @@ $(document).ready(function () {
 
         $('form').removeClass('is-active');
         $('#' + $(this).attr('name') + 'Form').addClass('is-active');
+
+        $('#selectedMode').val($(this).attr('name'));
     });
+
+    if ($('#selectedMode').val() === "signup") {
+        $('.tab').removeClass('is-active');
+        $('.signupLabel').addClass('is-active');
+
+        $('form').removeClass('is-active');
+        $('#signupForm').addClass('is-active');
+    }
 });
 
 function loginUser() {

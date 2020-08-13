@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    background-color: #f0f8ff;
+}
+
+.header {
+    text-align: center;
+    height: 72px;
+}
+
+.logoimage {
+    height: 72px;
+}
+
+/* スマホ用 */
+@media screen and (max-width: 480px) {
+    .header {
+        height: 42px;
+    }
+    .logoimage {
+        height: 42px;
+    }
+}

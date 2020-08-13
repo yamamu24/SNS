@@ -1,3 +1,33 @@
 #header {
     font-size: 30px;
+    position: relative;
+}
+
+.pcmenu {
+    position: absolute;
+    display: inline-block;
+    right: 18px;
+}
+
+.iconHeight36 {
+    width: 36px;
+    height: 36px;
+}
+
+.menuIcon {
+    margin: 18px 0;
+}
+
+/* スマホ用 */
+@media screen and (max-width: 480px) {
+    .pcmenu {
+        right: 11px;
+    }
+    .iconHeight36 {
+        width: 20px;
+        height: 20px;
+    }
+    .menuIcon {
+        margin: 11px 0;
+    }
 }
